@@ -1,0 +1,183 @@
+@media screen and (max-width: 925px) {
+    .container-xl {
+        padding: 0 30px;
+    }
+    .header-block {
+        grid-template-areas:
+            "contacts contacts contacts"
+            "logo logo ..."
+            "nav nav nav";
+        & .header-block_contacts {
+            justify-content: flex-start;
+            padding-bottom: 32px;
+        }
+        & .nav_list {
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container-xl {
+        padding: 0 30px;
+        max-width: 648px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .bg-grey {
+        background: #f5f5fa;
+        height: 55px;
+    }
+    .header-block_nav {
+        & .nav_list {
+            display: none;
+        }
+        & .nav-hamb {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            right: 8px;
+            z-index: 150;
+        }
+        & .nav-hamb_field {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        & .nav-hamb_field:hover {
+            background: #e6e6f0;
+            border-radius: 8px;
+        }
+        & .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px auto;
+            background: $color_4;
+            transition: 0.2s;
+        }
+    }
+    .popup {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $color_1;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+        overflow: auto;
+        margin: 0 auto;
+        border-radius: 12px 12px 0 0;
+    }
+    .popup.open {
+        right: 0px;
+    }
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        padding: 60px 20px;
+    }
+    .header-block .nav_list .nav-link {
+        color: $color_3_active;
+        margin-right: 0;
+    }
+    .nav_list li {
+        display: block;
+        color: $color_3_active;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        background: #f5f5fa;
+        border-radius: 12px;
+        padding: 7px 0px;
+        margin: 0 0 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-hamb.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-hamb.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+        background: #ec6f5d;
+    }
+    .nav-hamb.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+        background: #ec6f5d;
+    }
+
+    body.noscroll {
+        overflow: hidden;
+    }
+    .header-block_nav .nav-hamb:hover,
+    .header-block_nav .nav-hamb:active {
+        background-color: rgba(245, 245, 250, 0.2);
+        border-radius: 8px;
+    }
+    .header-block .nav_list .nav-link a:hover,
+    .header-block .nav_list .nav-link a:active {
+        color: $color_2_accent;
+        text-decoration: none;
+    }
+    .header-block {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "contacts contacts"
+            "logo nav";
+        padding-top: 12px;
+        & .contacts_address,
+        .contacts_fb {
+            display: none;
+        }
+        & .point {
+            display: none;
+        }
+    }
+    .header-block .header-block_contacts {
+        justify-content: space-between;
+    }
+    .header-block .header-block_contacts {
+        justify-content: space-between;
+    }
+    .header-block_logo {
+        align-items: center;
+        & img {
+            max-width: 70px;
+        }
+        & .pages span {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        & .pages {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .article-block {
+        padding-top: 90px;
+        & .article-block_info h1 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        & .article-block_info h2 {
+            font-size: 30px;
+            line-height: 37px;
+        }
+        & .article-block_info h3 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .publications-block h2 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+}
