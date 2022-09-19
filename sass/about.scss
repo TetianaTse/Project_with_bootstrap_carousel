@@ -169,7 +169,7 @@ body {
 }
 .about-team {
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     & .about-team_flex {
         display: flex;
     }
@@ -183,9 +183,13 @@ body {
             line-height: 30px;
             color: $color_6;
         }
+        & .text_pd {
+            padding-top: 0px;
+        }
     }
     & .about-team_showing {
         padding: 0 30px;
+        border-left: 4px solid #e6e6f0;
         & img {
             vertical-align: inherit;
             padding-right: 8px;
@@ -218,15 +222,43 @@ body {
     }
 }
 
-
 // carousel
 .carousel-achievements {
     padding: 60px 0;
+    & h3 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color_4;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 30px 0;
+    }
+    & .carousel-img {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    & .img-block {
+        width: 370px;
+        height: 110px;
+        background-color: $color_1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img {
+            height: 60px;
+        }
+    }
 
     & .carousel-inner {
         border-radius: 12px;
         background: #f5f5fa;
-        height: 344px;
+        height: 263px;
     }
     & .carousel-indicators {
         margin-bottom: -2rem;
@@ -244,6 +276,9 @@ body {
         }
     }
 }
+.achievment-block {
+    display: none;
+}
 
 @import "adaptive";
-@import "adaptivepublic";
+@import "adaptiveabout";
