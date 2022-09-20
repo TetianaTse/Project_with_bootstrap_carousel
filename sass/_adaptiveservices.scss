@@ -1,0 +1,22 @@
+@media screen and (max-width: 925px) {
+    .header-block {
+        grid-template-areas:
+            "contacts contacts contacts"
+            "logo logo ..."
+            "nav nav nav";
+        & .header-block_contacts {
+            justify-content: flex-start;
+            padding-bottom: 32px;
+        }
+        & .nav_list {
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .serveces {
+        padding: 120px 0 60px;
+    }
+}

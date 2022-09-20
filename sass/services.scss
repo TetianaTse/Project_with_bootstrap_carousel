@@ -27,11 +27,6 @@ body {
     );
     border-radius: 0px 0px 12px 12px;
     margin: 0;
-    .bg-block_img {
-        background-image: url("../images/main_page/Symbol_1.svg");
-        background-repeat: no-repeat;
-        background-position: top;
-    }
 }
 .shadow_1 {
     background: #cacadb;
@@ -70,7 +65,7 @@ p {
 .header-block {
     padding-top: 50px;
     display: grid;
-    grid-template-columns: 140px 1fr 1fr;
+    grid-template-columns: 382px 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "logo contacts contacts"
@@ -78,9 +73,24 @@ p {
 
     &_logo {
         grid-area: logo;
+        display: flex;
         & img {
             display: block;
             padding-bottom: 6px;
+        }
+        & .pages {
+            display: block;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 45px;
+            color: $color_1;
+            & span {
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 45px;
+                color: $color_2_accent;
+                padding: 0 4px;
+            }
         }
     }
     &_nav {
@@ -173,104 +183,9 @@ p {
 }
 
 // main-block
-
-.main-block_title {
-    padding-top: 261px;
-    text-align: center;
-    padding-bottom: 60px;
-
-    & h1 {
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 46px;
-        text-align: center;
-        padding-bottom: 305px;
-    }
-    & .btn_scroll {
-        cursor: pointer;
-        scroll-behavior: smooth;
-        position: relative;
-        & #scroll-white {
-            position: relative;
-        }
-        & #scroll-pink {
-            position: absolute;
-            left: 0;
-            left: 0;
-            opacity: 0%;
-        }
-        & #scroll-white:hover {
-            opacity: 0%;
-        }
-        & #scroll-pink:hover {
-            opacity: 100%;
-        }
-    }
-
-    & .main-block_list {
-        & .list_grid {
-            display: grid;
-            grid-template-columns: 40% 1fr;
-            padding: 90px 30px 60px 0px;
-
-            & .list_title {
-                text-align: right;
-                padding-right: 60px;
-                border-right: 4px solid rgba(255, 255, 255, 0.3);
-            }
-            & .list_title h2 {
-                padding-bottom: 30px;
-                cursor: pointer;
-                font-weight: 700;
-                font-size: 38px;
-                line-height: 46px;
-            }
-            & .list_title h2:hover,
-            & .list_title h2:focus {
-                color: $color_2_accent;
-            }
-            .active_title {
-                background: linear-gradient(
-                    90.13deg,
-                    #ef8080 0.84%,
-                    #f0145a 99.96%
-                );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: 700;
-                font-size: 38px;
-                line-height: 46px;
-            }
-            & .list_about {
-                padding: 43px 0 43px 60px;
-                text-align: left;
-                & h3 {
-                    font-weight: 700;
-                    font-size: 30px;
-                    line-height: 37px;
-                    padding-bottom: 30px;
-                }
-                & p {
-                    font-weight: 400;
-                    font-size: 19px;
-                    line-height: 30px;
-                }
-            }
-        }
-    }
-}
-
-// Servises
-
 .serveces {
-    padding-bottom: 60px;
-    & h4 {
-        color: $color_3_active;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        padding-bottom: 10px;
-    }
+    padding: 60px 0;
+
     & h2 {
         font-weight: 700;
         font-size: 38px;
@@ -303,82 +218,6 @@ p {
     }
     & .services-cards .card_info a:hover h3 {
         color: $color_2_accent;
-    }
-}
-
-// carousel
-.carousel-block {
-    padding: 60px 0;
-
-    & .carousel-inner {
-        border-radius: 12px;
-        background: #f5f5fa;
-        height: 344px;
-    }
-    & .carousel-indicators {
-        margin-bottom: -2rem;
-        & button {
-            background: $color_3_active;
-            opacity: 0.2;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: none;
-        }
-        & button.active {
-            background: $color_3_active;
-            opacity: 1;
-        }
-    }
-    & .carousel-text {
-        background: #f5f5fa;
-    }
-    & .carousel-caption {
-        text-align: left;
-        bottom: 30px;
-        left: 430px;
-        right: 0;
-        padding: 0;
-        top: 0px;
-        & h5 {
-            padding-top: 20px;
-            color: $color_3_active;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 17px;
-            text-transform: uppercase;
-            margin: 0;
-        }
-        & .carousel-main_text {
-            padding: 5px 0 20px;
-            font-weight: 700;
-            font-size: 38px;
-            line-height: 46px;
-
-            background: linear-gradient(
-                90.13deg,
-                #f0145a 0.84%,
-                #ef8080 99.96%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-        }
-        & .carousel-text_name {
-            color: #b3b3ba;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
-            padding-bottom: 6px;
-            margin: 0;
-        }
-        & .carousel-text_job {
-            color: #b3b3ba;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 22px;
-            margin: 0;
-        }
     }
 }
 // Companies
@@ -448,84 +287,6 @@ p {
         }
     }
 }
-
-//publications
-
-.publications-block {
-    background: #f5f5fa;
-    padding: 30px 0;
-    h5 {
-        color: $color_3_active;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        text-transform: uppercase;
-        padding-bottom: 10px;
-    }
-    h2 {
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 46px;
-        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding-bottom: 30px;
-    }
-    & .publications-block_cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "one two three";
-        gap: 30px;
-        & .card.one {
-            grid-area: one;
-        }
-        & .card.two {
-            grid-area: two;
-        }
-        & .card.three {
-            grid-area: three;
-        }
-        & .card {
-            border-radius: 8px;
-            border: none;
-            .card_text {
-                padding: 30px;
-            }
-            & img {
-                object-fit: cover;
-                width: 100%;
-            }
-            & h3 {
-                margin-bottom: 15px;
-                color: $color_3_active;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 20px;
-            }
-            & .publications_data {
-                padding-bottom: 15px;
-                color: $color_5;
-                font-weight: 700;
-                font-size: 12px;
-                line-height: 15px;
-                text-transform: uppercase;
-                border-bottom: 4px solid #e6e6f0;
-            }
-            & .publications_text {
-                color: $color_6;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 22px;
-                padding-top: 15px;
-            }
-        }
-    }
-}
-.card:hover,
-.card:focus {
-    transform: scale(1.02);
-}
-
 // Footer
 
 footer {
@@ -616,3 +377,4 @@ footer {
 }
 
 @import "adaptive";
+@import "adaptiveservices";
