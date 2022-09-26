@@ -1,8 +1,3 @@
-@media screen and (max-width: 1450px) {
-    .carousel-achievements .img-block {
-        width: 196px;
-    }
-}
 @media screen and (max-width: 925px) {
     .container-xl {
         padding: 0 30px;
@@ -21,45 +16,28 @@
             margin-top: 30px;
         }
     }
-    .main-img h1 {
-        padding: 103px 0;
-        font-size: 86px;
-        line-height: 104px;
+    .team-block_list {
+        gap: 40px;
+        & .team-info {
+            max-width: calc(33.33% - 27px);
+        }
     }
-    .carousel-achievements .img-block {
-        width: 132px;
-        & img {
-            height: 40px;
+    .team-block_list .team-info img {
+        height: 400px;
+    }
+}
+@media screen and (max-width: 865px) {
+    .team-block_title {
+        max-width: 100%;
+    }
+    .team-block_list {
+        gap: 60px;
+        & .team-info {
+            max-width: calc(50% - 30px);
         }
     }
 }
-@media screen and (max-width: 768px) {
-    .container-xxxl {
-        padding: 0 30px;
-    }
-    .container-xl {
-        padding: 0 30px;
-        max-width: 648px;
-    }
-    .about-team {
-        & .about-team_flex {
-            flex-direction: column;
-            gap: 30px;
-        }
-        & .about-team_text {
-            max-width: 100%;
-        }
-    }
-    .main-img h1 {
-        padding: 89px 0;
-        font-size: 46px;
-        line-height: 56px;
-    }
-    .carousel-achievements .carousel-img {
-        gap: 20px;
-    }
-}
-@media screen and (max-width: 595px) {
+@media screen and (max-width: 585px) {
     .bg-grey {
         background: #f5f5fa;
         height: 55px;
@@ -162,11 +140,11 @@
         text-decoration: none;
     }
     .header-block {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            "contacts contacts contacts"
-            "logo logo nav";
+            "contacts contacts"
+            "logo nav";
         padding-top: 12px;
         & .contacts_address,
         .contacts_fb {
@@ -175,6 +153,9 @@
         & .point {
             display: none;
         }
+    }
+    .header-block .header-block_contacts {
+        justify-content: space-between;
     }
     .header-block .header-block_contacts {
         justify-content: space-between;
@@ -194,36 +175,19 @@
             line-height: 30px;
         }
     }
-    .main-img h1 {
-        font-size: 36px;
-        line-height: 44px;
-        letter-spacing: 13px;
-        padding: 45px 0;
+    .team-block {
+        padding: 90px 0 30px;
     }
-    .about-team {
-        padding: 30px 0;
-    }
-    .about-team.pd {
-        padding-top: 90px;
-    }
-    .accent_title {
+    .team-block_title h1 {
         font-size: 30px;
         line-height: 37px;
     }
-    .carousel-achievements {
-        display: none;
-    }
-    .achievment-block {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-around;
-        gap: 20px;
-        padding-bottom: 60px;
-        & .img-block {
-            width: 35%;
-            height: 45px;
-            display: flex;
-            justify-content: center;
+    .team-block_list {
+        padding-top: 30px;
+        gap: 30px;
+        justify-content: center;
+        & .team-info {
+            max-width: 100%;
         }
     }
 }

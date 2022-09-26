@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/publications.css">
-    <title>Publications</title>
+    <link rel="stylesheet" href="css/service_entry.css">
+    <title>Services</title>
 </head>
 <body>
+<div class="bg-block">
 <header>
     <div class="bg-grey">
     <div class="container-xxl">
@@ -30,15 +30,16 @@
                 </div>
                 <div class="contacts_fb">
                     <span class="point fb"></span>
-                    <a href="https://uk-ua.facebook.com"><svg id="svg" width="24" height="25" viewBox="0 0 24 25" fill="#B3B3BA" xmlns="http://www.w3.org/2000/svg">
+                    <a href="https://uk-ua.facebook.com" tabindex="0"><svg id="svg" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
                         </svg>
                     </a>
                 </div>
         </div>
         <div class="header-block_logo">
-                <a class="navbar-brand" href="index.html"><img src="images/Publications/Logo.png" alt="logo"></a>
-                <p class="pages"><span>/</span>publications</p>
+                <a class="navbar-brand" href="index.html"><img src="images/main_page/Logo.svg" alt="logo">
+                <img src="images/main_page/LAW_COMPANY.svg" alt="LAW_COMPANY"></a>
+                <p class="pages"><span>/</span>services</p>
         </div>
         <nav class="header-block_nav">
                 <div class="nav-hamb" id="hamb">
@@ -50,9 +51,9 @@
                 </div>
                 <ul class="nav_list" id="menu">
                     <li class="nav-link"><a href="about.html">about us</a></li>
-                    <li class="nav-link"><a href="services.html">services</a></li>
+                    <li class="nav-link active"><a href="services.html">services</a></li>
                     <li class="nav-link"><a href="team.html">team</a></li>
-                    <li class="nav-link active"><a href="publications_page.html">publications</a></li>
+                    <li class="nav-link"><a href="publications_page.html">publications</a></li>
                     <li class="nav-link"><a href="#">contact</a></li>
                 </ul>
             </nav>
@@ -61,41 +62,43 @@
     </div>
     </div>
 </header>
-    <!-- Main -->
-    <main>
-        <div class="container-xl">
-            <section class="article-block">
-                <div class="article-block_info">
-                    <img class="main-title" src="images/Publications/picture_main.jpg" alt="picture_main">
-                    <h1 tabindex="0">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h1>
-                    <p class="publications_data">September 29</p>
-                    <p class="article-block_text">On January 21, the French National Data Protection Commission (CNIL) announced on its website that it had fined Google for violating the EU's General Data Protection Regulation (GDPR). It took six months for the EU countries to make a quality level-up in the amount of fines for non-compliance with this standard. Prior to that, the fine was mainly € 20,000-30,000, with the largest fine amounting to € 400,000 and related to a hospital in Portugal. But this precedent is interesting not so much the amount of the fine as the rigidity of the regulator's approaches. Denis Beregovyi, Axon Partners, explains why, especially for Mind.</p>
-                    <p class="article-block_text">For what? The group complaints against Google arrived at CNIL on the same day that the GDPR came into force. The complainants reported that Google processed users' personal data without due cause, in particular to create personalized advertising offers</p>
-                    <h2 tabindex="0">To the attention of Ukrainian security officers: the inspection was conducted online, without searches, without seizure of servers or other visible interference for business. And so it was possible.</h2>
-                    <h3 tabindex="0">According to the results of CNIL inspections revealed violations of two requirements of the GDPR:</h3>
-                    <ul class="article-list" tabindex="0">
-                        <li tabindex="0"><span class="number">1. </span>Transparency and awareness of users about the processing of personal data.</li>
-                        <li tabindex="0"><span class="number">2. </span>Lack of proper user consent for the processing of personal data for the purpose of personalizing advertising.</li>
-                    </ul>
-                    <p class="article-block_text">In the case of personalization of advertising, Google was sure to obtain the consent of users, because, firstly, when creating Google accounts, the user agrees to the Privacy Policy, and secondly, Google has a section "Ads personalization", where you can disable this feature.</p>
-            <div class="advertising-block">
-                <a href="https://www.google.com"><img src="images/Publications/advertising.jpg" alt="advertising"></a>
-            </div>
-            <p class="article-block_text">However, CNIL does not think so, because the information about the personalization of advertising is not clear enough to users. As an example, the Commission claims that the relevant "Personalization" window does not contain information on the full range of Google services that collect and process personal data for this purpose (YouTube, Google search, Play Store, Google pictures, Gmail, etc.). ), and therefore, the user cannot realize to what extent the data is used and how exactly they can be combined.</p>
-            <h3 tabindex="0">So, let's walk through the text of the CNIL decision</h3>
-            <p class="article-block_text"> Why France and not Ireland. Google operates in Europe through a legal entity in Ireland. But the case was not initiated by the Irish, but by the French regulator. This is why it happened.</p>
-            <p class="article-block_text">If data processing decisions are taken anywhere outside the EU, there is a one-stop mechanism - where the complaint is received, the body considers it. Because Google's data processing center is located in the United States and the complaint was first received in France, CNIL considered it.</p>
-                <div class="social-link">
-                    <a href="https://uk-ua.facebook.com"><img src="images/Publications/Facebook.png" alt="Facebook"></a>
-                    <a href="https://web.telegram.org/"><img src="images/Publications/Telegram.png" alt="Telegram"></a>
-                    <a href="https://ua.linkedin.com/"><img src="images/Publications/LinkedIn.png" alt="LinkedIn"></a>
+<main>
+    <div class="container-xl">
+    <!-- Services -->
+        <section class="services-block">
+            <div class="services-info">
+                <div class="card_main">
+                    <img src="images/main_page/Ecommerce.svg" alt="Ecommerce">
+                    <h3>IT and e-commerce</h3>
+                    <p>An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.</p>
+                    <p>In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.</p>
+                    <button>Free consultation</button>
                 </div>
-            </div>
+                <h2 class="title_card_area">Services in this area:</h2>
+                <div class="card-area">
+                    <div class="card_list">
+                        <ul>
+                            <li><span class="point_pink"></span>support of investment projects for the development of port infrastructure;</li>
+                            <li><span class="point_pink"></span>certification of GTS, entering information about them in mandatory databases and registers;</li>
+                            <li><span class="point_pink"></span>registration of permits for the construction of port terminals;</li>
+                            <li><span class="point_pink"></span>registration of permit and other mandatory documentation required for carrying out activities in the port (emission permit, conclusion on EIA, RTC, etc.);</li>
+                        </ul>
+                    </div>
+                    <div class="card_list">
+                        <ul>
+                            <li><span class="point_pink"></span>support of procedures related to the lease of state property in the port;</li>
+                            <li><span class="point_pink"></span>support of procedures related to confirmation of the status of port operator, maritime agent, foreign sailing line;</li>
+                            <li><span class="point_pink"></span>support of procedures related to the inclusion of the company within the port;</li>
+                            <li><span class="point_pink"></span>appeals against actions related to the illegal imposition of services in the port by monopoly companies.</li>
+                        </ul>
+                    </div>
+                </div>
         </section>
     </div>
-
-            <!-- Publications -->
-
+</div>       
+    <div class="shadow_1"></div>
+    <div class="shadow_2"></div>
+<!-- Publications -->
     <section class="publications-block">
         <div class="container-xxl">
                 <h5>Publications ></h5>
@@ -131,11 +134,9 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    
-    <footer>
+    </div>    
+</main>
+<footer>
         <div class="container-xxl">
             <div class="footer-block">
                 <div class="footer_address">
@@ -145,7 +146,7 @@
                 </div>
                 <div class="footer_contacts">
                     <div class="contacts_fb">
-                        <a href="https://uk-ua.facebook.com"><svg id="svg_accent" width="24" height="25" viewBox="0 0 24 25" fill="#24A3FF" xmlns="http://www.w3.org/2000/svg">
+                        <a href="https://uk-ua.facebook.com" tabindex="0"><svg id="svg_accent" width="24" height="25" viewBox="0 0 24 25" fill="#24A3FF" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
                         </svg>
                         </a>
@@ -166,4 +167,4 @@
     </footer>
     <script src="JS/script.js"></script>
 </body>
-</html>
+</html>        

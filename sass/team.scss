@@ -3,6 +3,13 @@
 * {
     box-sizing: border-box;
 }
+#svg {
+    fill: $color_5;
+    vertical-align: middle;
+}
+img {
+    object-fit: cover;
+}
 
 body {
     margin: 0;
@@ -10,35 +17,17 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: $color_1;
+    color: $color_6;
 }
-.container-xxl {
-    max-width: 1320px;
+.container-xl {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-.bg-block {
-    background: linear-gradient(
-        228.57deg,
-        #323264 11.93%,
-        #323264 57.17%,
-        #643e72 87.46%
-    );
-    border-radius: 0px 0px 12px 12px;
-    margin: 0;
-}
-.shadow_1 {
-    background: #cacadb;
-    border-radius: 0px 0px 12px 12px;
-    margin: 0 20px;
-    padding-top: 10px;
-}
-.shadow_2 {
-    background: #e7e7f2;
-    border-radius: 0px 0px 12px 12px;
-    margin: 0 40px;
-    padding-top: 10px;
+.container-xxl {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 ul {
     list-style: none;
@@ -60,7 +49,6 @@ p {
     color: $color_2_accent;
 }
 
-// Header
 .header-block {
     padding-top: 50px;
     display: grid;
@@ -82,7 +70,7 @@ p {
             font-weight: 400;
             font-size: 36px;
             line-height: 45px;
-            color: $color_1;
+            color: $color_4;
             & span {
                 font-weight: 700;
                 font-size: 45px;
@@ -103,6 +91,7 @@ p {
         grid-area: contacts;
 
         & .contacts_lang .lang-link {
+            color: $color_5;
             font-weight: 700;
             font-size: 12px;
             line-height: 15px;
@@ -110,13 +99,13 @@ p {
         }
         & .contacts_lang .lang-link:hover,
         .contacts_lang .lang-link:focus {
-            background: rgba(255, 255, 255, 0.2);
+            background: $color_2_accent;
             border-radius: 8px;
             outline: none;
             color: $color_1;
         }
 
-        & .active {
+        & .lang-link.active {
             background: $color_2_accent;
             border-radius: 8px;
             outline: none;
@@ -124,6 +113,7 @@ p {
         }
 
         & .contacts_address p {
+            color: $color_5;
             margin: 0;
             line-height: 20px;
         }
@@ -133,6 +123,7 @@ p {
         }
         & .contacts_tel {
             font-weight: 700;
+            color: $color_5;
         }
     }
     & .navbar.navbar-expand-lg {
@@ -147,7 +138,7 @@ p {
 
         & .nav-link {
             margin-right: 15px;
-            color: $color_1;
+            color: $color_3_active;
         }
         & .nav-link:last-child {
             margin-right: 0px;
@@ -156,7 +147,11 @@ p {
         .nav-link a:focus {
             text-decoration: underline;
             outline: none;
-            color: $color_1;
+            color: $color_3_active;
+        }
+        & .nav-link.active {
+            color: $color_2_accent;
+            text-decoration: underline;
         }
     }
 }
@@ -172,120 +167,84 @@ p {
 .tel:hover,
 .tel:focus {
     text-decoration: underline;
-    color: $color_1;
+    color: $color_2_accent;
 }
-#svg {
-    fill: $color_1;
-}
+
 #svg:hover {
     fill: $color_2_accent;
 }
 
-// main-block
-.serveces {
+// Main
+.team-block {
     padding: 60px 0;
-
-    & h2 {
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 46px;
-        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding-bottom: 60px;
-    }
-    & .services-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 60px;
-
-        & .card_info h3 {
-            padding: 30px 0 15px;
-            color: $color_3_active;
-            font-weight: 700;
-            font-size: 22px;
-            line-height: 27px;
-        }
-        & .card_info img {
-            padding: 14px;
-            background-color: $color_1;
-            border-radius: 24px;
-        }
-    }
-    & .services-cards .card_info:hover {
-        transform: scale(1.05);
-    }
-    & .services-cards .card_info a:hover h3 {
-        color: $color_2_accent;
-    }
-}
-// Companies
-
-.companies-block {
-    padding-top: 60px;
     text-align: center;
-    & h5 {
-        color: $color_4;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        text-transform: uppercase;
-        padding-bottom: 30px;
+    &_title {
+        max-width: 81%;
+        margin: 0 auto;
+        & h1 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            background: linear-gradient(
+                90.13deg,
+                #f0145a 0.84%,
+                #ef8080 99.96%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+        }
     }
-    & img {
-        object-fit: cover;
-        width: 100%;
-        padding: 10px;
-    }
-    & .companies-block_list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 120px);
-
-        & .companies_name {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        & .companies_name.hillel {
-            background: #1c4280;
-        }
-        & .companies_name.wanna {
-            background: #143646;
-        }
-        & .companies_name.tapgerin {
-            background: linear-gradient(0deg, #f48b30, #f48b30), #f48b30;
-        }
-        & .companies_name.look {
-            background: #9e4dc3;
-        }
-        & .companies_name.orangead {
-            background: #fd9339;
-        }
-        & .companies_name.adtelligent {
-            background: #e2e2e4;
-        }
-        & .companies_name.clickky {
-            background: #c71c36;
-        }
-        & .companies_name.ecolease {
-            background: #dcf3f9;
-        }
-        & .companies_name.infratec {
-            background: #eaeaea;
-        }
-        & .companies_name.city_park {
-            background: #282240;
-        }
-        & .companies_name.artprint {
-            background: #1d4568;
-        }
-        & .companies_name.ultimate_card {
-            background: #000000;
+    &_list {
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        & .team-info {
+            max-width: calc(33.33% - 40px);
+            text-align: left;
+            position: relative;
+            & img {
+                width: 100%;
+                border-radius: 12px;
+            }
+            & h3 {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: $color_4;
+                margin: 15px 0 5px;
+            }
+            & h3:hover {
+                color: $color_2_accent;
+            }
+            & p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: $color_5;
+            }
+            & #btn-team {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+            }
+            & #btn-accent {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                opacity: 0;
+            }
+            & #btn-team:hover {
+                opacity: 0;
+            }
+            & #btn-accent:hover {
+                opacity: 100;
+            }
         }
     }
 }
+
 // Footer
 
 footer {
@@ -376,4 +335,4 @@ footer {
 }
 
 @import "adaptive";
-@import "adaptiveservices";
+@import "adaptiveteam";

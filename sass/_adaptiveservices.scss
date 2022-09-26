@@ -19,4 +19,55 @@
     .serveces {
         padding: 120px 0 60px;
     }
+    .header-block {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "contacts contacts contacts"
+            "logo logo nav";
+        padding-top: 12px;
+        & .contacts_address,
+        .contacts_fb {
+            display: none;
+        }
+        & .point {
+            display: none;
+        }
+    }
+    .header-block .header-block_contacts {
+        justify-content: space-between;
+    }
+    .header-block_logo {
+        align-items: center;
+        & img {
+            max-width: 70px;
+        }
+        & .pages span {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        & .pages {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .companies-block {
+        padding-top: 30px;
+    }
+    // services entry
+    .container-xl {
+        padding: 0 30px;
+    }
+    .services-info .card_main {
+        padding: 90px 0 30px;
+        & h3 {
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+    .services-info .card-area {
+        flex-direction: column;
+        gap: 0px;
+    }
 }
