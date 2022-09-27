@@ -174,113 +174,69 @@ p {
   fill: #F0145A;
 }
 
-.publications-block {
-  background: #f5f5fa;
-  margin-top: 60px;
-  padding: 30px 0;
-}
-.publications-block .publications-block_cards {
+.team-about {
+  padding: 60px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  grid-column-gap: 60px;
+  grid-template-columns: 400px 1fr;
+  grid-template-areas: "img contacts" "img text_block";
 }
-.publications-block .publications-block_cards .card {
-  border-radius: 8px;
-  border: none;
+.team-about_img {
+  grid-area: img;
 }
-.publications-block .publications-block_cards .card .card_text {
-  padding: 30px;
-}
-.publications-block .publications-block_cards .card img {
-  object-fit: cover;
+.team-about_img img {
+  border-radius: 12px;
   width: 100%;
+  height: 500px;
 }
-.publications-block .publications-block_cards .card h3 {
+.team-about_contacts {
+  grid-area: contacts;
+  padding-bottom: 30px;
+}
+.team-about_contacts h2 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
   margin-bottom: 15px;
-  color: #24A3FF;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
 }
-.publications-block .publications-block_cards .card .publications_data {
-  padding-bottom: 15px;
-  color: #B3B3BA;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  border-bottom: 4px solid #e6e6f0;
-}
-.publications-block .publications-block_cards .card .publications_text {
-  color: #000000;
+.team-about_contacts span {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  padding-top: 15px;
+  color: #B3B3BA;
 }
-.publications-block .button-block {
-  text-align: center;
-  padding: 30px 0;
-}
-.publications-block .button-block .btn-white {
-  font-weight: 700;
+.team-about_contacts a {
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #323264;
-  padding: 8px 30px;
-  background: #ffffff;
-  border-radius: 10px;
-  border: 2px solid #B3B3BA;
-  position: relative;
-  left: 20px;
-  cursor: pointer;
-}
-.publications-block .button-block .btn-grey {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #323264;
-  padding: 8px 30px;
-  background: #B3B3BA;
-  border-radius: 0 10px 10px 0;
-  border: 2px solid #B3B3BA;
-  cursor: pointer;
-}
-.publications-block .button-block .btn-grey:hover {
-  background: rgba(179, 179, 186, 0.662745098);
   color: #24A3FF;
 }
-.publications-block .button-accent {
-  padding: 30px 0;
-  text-align: center;
+.team-about_contacts .point {
+  vertical-align: auto;
 }
-.publications-block .button-accent .btn-accent {
-  color: #ffffff;
-  font-weight: 700;
+.team-about_text {
+  grid-area: text_block;
+  padding-top: 30px;
+  border-top: 4px solid #e6e6f0;
+}
+.team-about_text p {
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
-  padding: 18px 30px;
-  background: #24A3FF;
-  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
+  line-height: 26px;
+  padding-bottom: 30px;
 }
-.publications-block .button-accent .btn-accent:hover,
-.publications-block .button-accent .btn-accent:focus {
-  background: #0085ff;
-}
-.publications-block .button-accent .btn-accent:active {
-  background: #006ccf;
-}
-
-.card:hover,
-.card:focus {
-  transform: scale(1.02);
-}
-.card:hover h3:hover,
-.card:focus h3:hover {
-  color: #F0145A;
+.team-about_text h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -695,6 +651,23 @@ footer .footer-block .footer_contacts .contacts_mail {
     text-align: center;
   }
 }
+@media screen and (max-width: 1024px) {
+  .team-about {
+    grid-template-columns: 300px 1fr;
+  }
+  .team-about_img img {
+    width: 100%;
+    height: 375px;
+  }
+  .team-about_contacts span,
+.team-about_contacts a {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .team-about_contacts .point {
+    display: none;
+  }
+}
 @media screen and (max-width: 925px) {
   .container-xl {
     padding: 0 30px;
@@ -710,14 +683,38 @@ footer .footer-block .footer_contacts .contacts_mail {
     justify-content: flex-start;
     margin-top: 30px;
   }
-}
-@media screen and (max-width: 768px) {
-  .container-xl {
-    padding: 0 30px;
-    max-width: 648px;
+  .team-block_list {
+    gap: 40px;
+  }
+  .team-block_list .team-info {
+    max-width: calc(33.33% - 27px);
+  }
+  .team-block_list .team-info img {
+    height: 400px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 865px) {
+  .team-block_title {
+    max-width: 100%;
+  }
+  .team-block_list {
+    gap: 60px;
+  }
+  .team-block_list .team-info {
+    max-width: calc(50% - 30px);
+  }
+  .team-about {
+    gap: 30px;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "img contacts" "text_block text_block";
+  }
+  .team-about_contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 585px) {
   .bg-grey {
     background: #f5f5fa;
     height: 55px;
@@ -849,31 +846,29 @@ footer .footer-block .footer_contacts .contacts_mail {
     font-size: 20px;
     line-height: 30px;
   }
-  .article-block {
-    padding-top: 90px;
+  .team-block {
+    padding: 90px 0 30px;
   }
-  .article-block .article-block_info h1 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .article-block .article-block_info h2 {
+  .team-block_title h1 {
     font-size: 30px;
     line-height: 37px;
   }
-  .article-block .article-block_info h3 {
-    font-size: 16px;
-    line-height: 20px;
+  .team-block_list {
+    padding-top: 30px;
+    gap: 30px;
+    justify-content: center;
   }
-  .publications-block h2 {
-    font-size: 30px;
-    line-height: 37px;
+  .team-block_list .team-info {
+    max-width: 100%;
   }
-}
-@media screen and (max-width: 550px) {
-  .publications-block {
-    margin-top: 90px;
-    padding: 0;
+  .team-about {
+    padding: 90px 0 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "contacts" "text_block";
+  }
+  .team-about_contacts {
+    padding-bottom: 0;
   }
 }
 
-/*# sourceMappingURL=public_page.css.map */
+/*# sourceMappingURL=team_entry.css.map */
