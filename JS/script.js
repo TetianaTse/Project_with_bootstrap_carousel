@@ -16,3 +16,6 @@ function hambBtn(e) {
 function renderPopup() {
     popup.appendChild(menu);
 }
+
+
+

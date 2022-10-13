@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/team_entry.css">
+    <link rel="stylesheet" href="css/contacts.css">
     <title>About</title>
 </head>
 <body>
-<header>
+    <header>
     <div class="bg-grey">
     <div class="container-xxl">
     <div class="header-block">
@@ -50,9 +50,9 @@
                 <ul class="nav_list" id="menu">
                     <li class="nav-link"><a href="about.html">about us</a></li>
                     <li class="nav-link"><a href="services.html">services</a></li>
-                    <li class="nav-link active"><a href="team.html">team</a></li>
+                    <li class="nav-link"><a href="team.html">team</a></li>
                     <li class="nav-link"><a href="publications_page.html">publications</a></li>
-                    <li class="nav-link"><a href="contacts.html">contact</a></li>
+                    <li class="nav-link active"><a href="contacts.html">contact</a></li>
                 </ul>
             </nav>
             <div class="popup" id="popup"></div>
@@ -63,32 +63,44 @@
 <!-- Main -->
 
 <main>
-    <div class="container-xxl">
-        <section class="team-about">
-            <div class="team-about_img">
-                <img src="images/team/Team-5.jpg" alt="Oksana Kobzar">
+    <div class="container-xl">
+        <section class="contacts">
+            <div class="contacts-block">
+                <div class="contacts-block_adress">
+                    <div class="adress">
+                        <p>Kyiv,</p>
+                        <p>Mechnikova str, 14</p>
+                    </div>
+                    <div class="contact-tel">
+                        <p class="tel"><a href="tel:080021192">0800 211 927</a></p>
+                        <p><a class="mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a></p>
+                    </div>
+                    <div class="page">
+                            <p><a href="https://uk-ua.facebook.com">
+                                <svg id="svg_accent" width="38" height="38" viewBox="0 0 24 25" fill="#24A3FF" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                                </svg>
+                            </p>
+                           <p class="text">Our page <br>on facebook</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-block_form">
+                    <form action="#" method="get">
+                        <h2>We would like to help you</h2>
+                        <p><input type="text" id="name" name="name" placeholder="Name"></p>
+                        <p><input type="text" id="message" name="message" placeholder="Message"></p>
+                        <h3>How to answer you?</h3>
+                        <p><input type="tel" name="tel" id="tel" placeholder="Phone number"></p>
+                        <p><input type="email" name="email" id="email" placeholder="Email"></p>
+                        <button class="btn-accent">Send message</button>
+                    </form>
+                </div>
             </div>
-            <div class="team-about_contacts">
-                <h2>Oksana Kobzar</h2>
-                <span>Equity partner, Attorney-at-law</span>
-                <span class="point"></span>
-                <a class="mail" href="mailto:kobzar@forstudy.space">kobzar@forstudy.space</a>
-                <span class="point"></span>
-                <a href="https://www.linkedin.com/">LinkedIn profile</a>
-            </div>
-            <div class="team-about_text">
-                <p>Oksana heads the practice of international trade and shipping. He specializes in resolving disputes related to the purchase and sale of raw materials and transportation of goods by sea</p>
-                <p>Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, container lines, as well as international banks and P&I clubs.</p>
-                <h3>Education</h3>
-                <p>National University "Odessa Law Academy", Master of Law.</p>
-                <h3>Experience</h3>
-                <p>Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of Ukraine</p>
-            </div>
-        </section>
 
+        </section>
     </div>
 </main>
-
 <!-- Footer -->
     
 <footer>
@@ -121,5 +133,7 @@
     </div>
 </footer>
 <script src="JS/script.js"></script>
+</body>
+</html>
 </body>
 </html>
